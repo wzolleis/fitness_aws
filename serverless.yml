@@ -30,7 +30,7 @@ provider:
 
 functions:
   # Defines an HTTP API endpoint that calls the main function in create_exercise.js
-  # - path: url path is /notes
+  # - path: url path is /exercises
   # - method: POST request
   # - cors: enabled CORS (Cross-Origin Resource Sharing) for browser cross
   #     domain api call
@@ -45,7 +45,7 @@ functions:
           authorizer: aws_iam
   get:
       # Defines an HTTP API endpoint that calls the main function in get.js
-      # - path: url path is /notes/{id}
+      # - path: url path is /exercises/{id}
       # - method: GET request
       handler: get_exercise.main
       events:
@@ -56,7 +56,7 @@ functions:
           authorizer: aws_iam
   list:
       # Defines an HTTP API endpoint that calls the main function in list.js
-      # - path: url path is /notes
+      # - path: url path is /exercises
       # - method: GET request
       handler: list_exercises.main
       events:
@@ -74,5 +74,16 @@ functions:
         - http:
             path: exercises/{id}
             method: put
+            cors: true
+            authorizer: aws_iam
+  delete:
+      # Defines an HTTP API endpoint that calls the main function in delete.js
+      # - path: url path is /exercises/{id}
+      # - method: DELETE request
+      handler: delete_exercise.main
+      events:
+        - http:
+            path: exercises/{id}
+            method: delete
             cors: true
             authorizer: aws_iam
