@@ -65,3 +65,14 @@ functions:
             method: get
             cors: true
             authorizer: aws_iam
+  update:
+      # Defines an HTTP API endpoint that calls the main function in update.js
+      # - path: url path is /exercises/{id}
+      # - method: PUT request
+      handler: update_exercise.main
+      events:
+        - http:
+            path: exercises/{id}
+            method: put
+            cors: true
+            authorizer: aws_iam
