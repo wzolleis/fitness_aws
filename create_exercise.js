@@ -1,11 +1,12 @@
 import uuid from 'uuid';
 import * as dynamoDbLib from './libs/dynamodb-lib';
 import {success, failure} from './libs/response-lib';
+import {EXERCISE_TABLE_NAME} from "./constants";
 
 export async function main(event, context, callback) {
     const data = JSON.parse(event.body);
     const params = {
-        TableName: 'fit_exercises',
+        TableName: EXERCISE_TABLE_NAME,
         Item: {
             // userId: event.requestContext.identity.cognitoIdentityId,
             id: uuid.v1(),

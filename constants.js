@@ -1,0 +1,1 @@
+export const EXERCISE_TABLE_NAME = 'fit_exercises';
