@@ -35,7 +35,7 @@ functions:
   # - cors: enabled CORS (Cross-Origin Resource Sharing) for browser cross
   #     domain api call
   # - authorizer: authenticate using the AWS IAM role
-  create:
+  createExercise:
     handler: create_exercise.main
     events:
       - http:
@@ -43,7 +43,7 @@ functions:
           method: post
           cors: true
           authorizer: aws_iam
-  get:
+  getExercises:
       # Defines an HTTP API endpoint that calls the main function in get.js
       # - path: url path is /exercises/{id}
       # - method: GET request
@@ -54,7 +54,7 @@ functions:
           method: get
           cors: true
           authorizer: aws_iam
-  list:
+  listExercises:
       # Defines an HTTP API endpoint that calls the main function in list.js
       # - path: url path is /exercises
       # - method: GET request
@@ -65,7 +65,7 @@ functions:
             method: get
             cors: true
             authorizer: aws_iam
-  update:
+  updateExercise:
       # Defines an HTTP API endpoint that calls the main function in update.js
       # - path: url path is /exercises/{id}
       # - method: PUT request
@@ -76,7 +76,7 @@ functions:
             method: put
             cors: true
             authorizer: aws_iam
-  delete:
+  deleteExercise:
       # Defines an HTTP API endpoint that calls the main function in delete.js
       # - path: url path is /exercises/{id}
       # - method: DELETE request
