@@ -7,16 +7,15 @@ export async function main(event, context, callback) {
     const params = {
         TableName: EXERCISE_TABLE_NAME,
         // 'Key' defines the partition key and sort key of the item to be updated
-        // - 'userId': Identity Pool identity id of the authenticated user
-        // - 'noteId': path parameter
         Key: {
             id: event.pathParameters.id,
         },
         // 'UpdateExpression' defines the attributes to be updated
         // 'ExpressionAttributeValues' defines the value in the update expression
-        UpdateExpression: 'SET content = :content',
+        UpdateExpression: 'SET content = :content, attachment = :attachment',
         ExpressionAttributeValues: {
             ':content': data.content ? data.content : null,
+            ':attachment': data.attachment ? data.attachment : null,
         },
         ReturnValues: 'ALL_NEW',
     };
@@ -26,6 +25,7 @@ export async function main(event, context, callback) {
         callback(null, success({status: true}));
     }
     catch (e) {
+        console.error(e);
         callback(null, failure({status: false}));
     }
 }

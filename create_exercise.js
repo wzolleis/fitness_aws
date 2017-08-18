@@ -11,7 +11,7 @@ export async function main(event, context, callback) {
             // userId: event.requestContext.identity.cognitoIdentityId,
             id: uuid.v1(),
             content: data.content,
-            // attachment: data.attachment,
+            attachment: data.attachment,
             // createdAt: new Date().getTime(),
         },
     };
