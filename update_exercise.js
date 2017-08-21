@@ -12,10 +12,18 @@ export async function main(event, context, callback) {
         },
         // 'UpdateExpression' defines the attributes to be updated
         // 'ExpressionAttributeValues' defines the value in the update expression
-        UpdateExpression: 'SET content = :content, attachment = :attachment',
+        // 'ExpressionAttributeNames' replaces the #... expressions with the real attribute names, which are reserved keywords in this case
+        UpdateExpression: 'SET attachment = :attachment, #ex_name = :name, device = :device, muskelgruppe = :muskelgruppe, #ex_type =:type',
         ExpressionAttributeValues: {
-            ':content': data.content ? data.content : null,
             ':attachment': data.attachment ? data.attachment : null,
+            ':name': data.name ? data.name : null,
+            ':device': data.device ? data.device : null,
+            ':muskelgruppe': data.muskelgruppe ? data.muskelgruppe : null,
+            ':type': data.type ? data.type : null
+        },
+        ExpressionAttributeNames: {
+            "#ex_name": "name",
+            "#ex_type": "type"
         },
         ReturnValues: 'ALL_NEW',
     };

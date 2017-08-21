@@ -10,8 +10,11 @@ export async function main(event, context, callback) {
         Item: {
             // userId: event.requestContext.identity.cognitoIdentityId,
             id: uuid.v1(),
-            content: data.content,
+            name: data.name,
+            device: data.device,
+            muskelgruppe: data.muskelgruppe,
             attachment: data.attachment,
+            type: data.type
             // createdAt: new Date().getTime(),
         },
     };

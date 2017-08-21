@@ -1,5 +1,5 @@
 {
-  "body": "{\"content\":\"new world\"}",
+  "body": "{\"name\":\"Schulterziehen neu neu\",\"device\":\"8\",\"muskelgruppe\":\"Schulter\",\"type\":\"gewicht\"}",
   "pathParameters": {
     "id": "1cba1840-8297-11e7-982c-b1362c8c83fc"
   },
