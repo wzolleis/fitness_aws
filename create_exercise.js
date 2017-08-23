@@ -5,15 +5,15 @@ import {EXERCISE_TABLE_NAME} from "./constants";
 
 export async function main(event, context, callback) {
     const data = JSON.parse(event.body);
+    console.info('data = ' + JSON.stringify(data));
+
     const params = {
         TableName: EXERCISE_TABLE_NAME,
         Item: {
-            // userId: event.requestContext.identity.cognitoIdentityId,
             id: uuid.v1(),
             name: data.name,
             device: data.device,
             muskelgruppe: data.muskelgruppe,
-            attachment: data.attachment,
             type: data.type
             // createdAt: new Date().getTime(),
         },
