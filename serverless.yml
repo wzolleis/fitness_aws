@@ -87,3 +87,14 @@ functions:
             method: delete
             cors: true
             authorizer: aws_iam
+  listPlans:
+        # Defines an HTTP API endpoint that calls the main function in list_plans.js
+        # - path: url path is /plans
+        # - method: GET request
+        handler: list_plans.main
+        events:
+          - http:
+              path: plans
+              method: get
+              cors: true
+              authorizer: aws_iam
