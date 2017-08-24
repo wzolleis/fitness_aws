@@ -77,7 +77,7 @@ functions:
             cors: true
             authorizer: aws_iam
   deleteExercise:
-      # Defines an HTTP API endpoint that calls the main function in delete.js
+      # Defines an HTTP API endpoint that calls the main function in delete_exercise.js
       # - path: url path is /exercises/{id}
       # - method: DELETE request
       handler: delete_exercise.main
@@ -98,3 +98,14 @@ functions:
               method: get
               cors: true
               authorizer: aws_iam
+  createPlan:
+          # Defines an HTTP API endpoint that calls the main function in create_plan.js
+          # - path: url path is /plans
+          # - method: POST request
+          handler: create_plan.main
+          events:
+            - http:
+                path: plans
+                method: post
+                cors: true
+                authorizer: aws_iam
