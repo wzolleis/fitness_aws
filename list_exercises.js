@@ -21,7 +21,7 @@ export async function main(event, context, callback) {
         callback(null, success(result.Items));
     }
     catch (e) {
-        console.log(e)
+        console.log(e);
         callback(null, failure({status: false}));
     }
 };
