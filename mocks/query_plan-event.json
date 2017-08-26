@@ -1,0 +1,10 @@
+{
+  "pathParameters": {
+    "createdAt": "2017-08-25"
+  },
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}
