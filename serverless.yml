@@ -109,3 +109,14 @@ functions:
                 method: post
                 cors: true
                 authorizer: aws_iam
+  getPlan:
+          # Defines an HTTP API endpoint that calls the main function in create_plan.js
+          # - path: url path is /plans
+          # - method: POST request
+          handler: get_plan.main
+          events:
+            - http:
+                path: plans/{id}
+                method: get
+                cors: true
+                authorizer: aws_iam

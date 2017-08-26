@@ -1,0 +1,18 @@
+{
+  "id": {
+    "AttributeValueList": [
+      {
+        "S": "1"
+      }
+    ],
+    "ComparisonOperator": "EQ"
+  },
+  "createdAt": {
+    "AttributeValueList": [
+      {
+        "S": "2016-01-02"
+      }
+    ],
+    "ComparisonOperator": "LE"
+  }
+}

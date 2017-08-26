@@ -1,0 +1,36 @@
+{
+  "Table": {
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "createdAt",
+        "AttributeType": "S"
+      },
+      {
+        "AttributeName": "id",
+        "AttributeType": "S"
+      }
+    ],
+    "ProvisionedThroughput": {
+      "NumberOfDecreasesToday": 0,
+      "WriteCapacityUnits": 5,
+      "LastIncreaseDateTime": 1503693689.085,
+      "ReadCapacityUnits": 5,
+      "LastDecreaseDateTime": 1503613582.272
+    },
+    "TableSizeBytes": 90,
+    "TableName": "fit_training_plan",
+    "TableStatus": "ACTIVE",
+    "KeySchema": [
+      {
+        "KeyType": "HASH",
+        "AttributeName": "id"
+      },
+      {
+        "KeyType": "RANGE",
+        "AttributeName": "createdAt"
+      }
+    ],
+    "ItemCount": 1,
+    "CreationDateTime": 1503613425.149
+  }
+}
