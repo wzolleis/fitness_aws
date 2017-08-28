@@ -29,14 +29,14 @@ provider:
       Resource: "arn:aws:dynamodb:eu-central-1:*:*"
 
 functions:
-  # Defines an HTTP API endpoint that calls the main function in create_exercise.js
+  # Defines an HTTP API endpoint that calls the main function in exercise_create.js
   # - path: url path is /exercises
   # - method: POST request
   # - cors: enabled CORS (Cross-Origin Resource Sharing) for browser cross
   #     domain api call
   # - authorizer: authenticate using the AWS IAM role
   createExercise:
-    handler: create_exercise.main
+    handler: exercise_create.main
     events:
       - http:
           path: exercises
@@ -47,7 +47,7 @@ functions:
       # Defines an HTTP API endpoint that calls the main function in get.js
       # - path: url path is /exercises/{id}
       # - method: GET request
-      handler: get_exercise.main
+      handler: exercise_get.main
       events:
       - http:
           path: exercises/{id}
@@ -58,7 +58,7 @@ functions:
       # Defines an HTTP API endpoint that calls the main function in list.js
       # - path: url path is /exercises
       # - method: GET request
-      handler: list_exercises.main
+      handler: exercises_list.main
       events:
         - http:
             path: exercises
@@ -69,7 +69,7 @@ functions:
       # Defines an HTTP API endpoint that calls the main function in update.js
       # - path: url path is /exercises/{id}
       # - method: PUT request
-      handler: update_exercise.main
+      handler: exercise_update.main
       events:
         - http:
             path: exercises/{id}
@@ -77,10 +77,10 @@ functions:
             cors: true
             authorizer: aws_iam
   deleteExercise:
-      # Defines an HTTP API endpoint that calls the main function in delete_exercise.js
+      # Defines an HTTP API endpoint that calls the main function in exercise_delete.js
       # - path: url path is /exercises/{id}
       # - method: DELETE request
-      handler: delete_exercise.main
+      handler: exercise_delete.main
       events:
         - http:
             path: exercises/{id}
@@ -88,10 +88,10 @@ functions:
             cors: true
             authorizer: aws_iam
   listPlans:
-        # Defines an HTTP API endpoint that calls the main function in list_plans.js
+        # Defines an HTTP API endpoint that calls the main function in plans_list.js
         # - path: url path is /plans
         # - method: GET request
-        handler: list_plans.main
+        handler: plans_list.main
         events:
           - http:
               path: plans
@@ -99,10 +99,10 @@ functions:
               cors: true
               authorizer: aws_iam
   createPlan:
-          # Defines an HTTP API endpoint that calls the main function in create_plan.js
+          # Defines an HTTP API endpoint that calls the main function in plan_create.js
           # - path: url path is /plans
           # - method: POST request
-          handler: create_plan.main
+          handler: plan_create.main
           events:
             - http:
                 path: plans
@@ -110,10 +110,10 @@ functions:
                 cors: true
                 authorizer: aws_iam
   getPlan:
-          # Defines an HTTP API endpoint that calls the main function in create_plan.js
+          # Defines an HTTP API endpoint that calls the main function in plan_create.js
           # - path: url path is /plans
           # - method: POST request
-          handler: get_plan.main
+          handler: plan_get.main
           events:
             - http:
                 path: plans/{id}
