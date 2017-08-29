@@ -2,12 +2,13 @@ import * as dynamoDbLib from './libs/dynamodb-lib';
 import {success, failure} from './libs/response-lib';
 import {EXERCISE_TABLE_NAME} from "./constants";
 import moment from "moment";
+import {createHistoryEntry} from "./exercise_history_create";
 
 export async function main(event, context, callback) {
     const data = JSON.parse(event.body);
 
     console.info('data = ' + JSON.stringify(data));
-    const now = moment().format('YYYY-DD-MM');
+    const now = moment().format('YYYY-DD-MM-HH-mm-ss');
 
     const params = {
         TableName: EXERCISE_TABLE_NAME,
@@ -35,6 +36,10 @@ export async function main(event, context, callback) {
     };
 
     try {
+        const historyData = {id: event.pathParameters.id, weight: data.weight};
+        const historyEntry = createHistoryEntry(historyData);
+        await dynamoDbLib.call('put', historyEntry);
+
         const result = await dynamoDbLib.call('update', params);
         callback(null, success({status: true}));
     }
