@@ -36,7 +36,7 @@ export async function main(event, context, callback) {
     };
 
     try {
-        const historyData = {id: event.pathParameters.id, weight: data.weight};
+        const historyData = {id: event.pathParameters.id, weight: data.weight, name: data.name};
         const historyEntry = createHistoryEntry(historyData);
         await dynamoDbLib.call('put', historyEntry);
 

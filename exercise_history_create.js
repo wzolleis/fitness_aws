@@ -10,7 +10,8 @@ export function createHistoryEntry(data) {
         Item: {
             id: data.id,
             createdAt: now,
-            weight: data.weight
+            weight: data.weight,
+            name: data.name
         },
     };
 }
