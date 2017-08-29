@@ -1,5 +1,5 @@
 {
-  "body": "{\"name\":\"Schulterziehen\",\"device\":\"8\",\"muskelgruppe\":\"Schulter\",\"type\":\"gewicht\"}",
+  "body": "{\"name\":\"Schulterziehen(test)\",\"device\":\"8\",\"muskelgruppe\":\"Schulter\",\"weight\":\"20\"}",
   "requestContext": {
     "identity": {
       "cognitoIdentityId": "USER-SUB-1234"

@@ -1,7 +1,7 @@
 {
-  "body": "{\"name\":\"Schulterziehen neu neu\",\"device\":\"8\",\"muskelgruppe\":\"Schulter\",\"type\":\"gewicht\"}",
+  "body": "{\"name\":\"Schulterziehen neu neu\",\"device\":\"8\",\"muskelgruppe\":\"Schulter\",\"weight\":\"35\"}",
   "pathParameters": {
-    "id": "1cba1840-8297-11e7-982c-b1362c8c83fc"
+    "id": "29136180-8cfd-11e7-be2a-35bb2b6a1767"
   },
   "requestContext": {
     "identity": {

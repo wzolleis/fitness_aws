@@ -2,6 +2,7 @@ import uuid from 'uuid';
 import * as dynamoDbLib from './libs/dynamodb-lib';
 import {success, failure} from './libs/response-lib';
 import {EXERCISE_TABLE_NAME} from "./constants";
+import moment from "moment";
 
 export async function main(event, context, callback) {
     const data = JSON.parse(event.body);
@@ -14,8 +15,9 @@ export async function main(event, context, callback) {
             name: data.name,
             device: data.device,
             muskelgruppe: data.muskelgruppe,
-            type: data.type
-            // createdAt: new Date().getTime(),
+            weight: data.weight,
+            changedAt: moment().format('YYYY-DD-MM'),
+            createdAt: moment().format('YYYY-DD-MM'),
         },
     };
 

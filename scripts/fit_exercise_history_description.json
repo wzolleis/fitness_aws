@@ -1,0 +1,35 @@
+{
+  "Table": {
+    "TableArn": "arn:aws:dynamodb:eu-central-1:268191508728:table/fit_exercise_history",
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "createdAt",
+        "AttributeType": "S"
+      },
+      {
+        "AttributeName": "id",
+        "AttributeType": "S"
+      }
+    ],
+    "ProvisionedThroughput": {
+      "NumberOfDecreasesToday": 0,
+      "WriteCapacityUnits": 1,
+      "ReadCapacityUnits": 1
+    },
+    "TableSizeBytes": 0,
+    "TableName": "fit_exercise_history",
+    "TableStatus": "ACTIVE",
+    "KeySchema": [
+      {
+        "KeyType": "HASH",
+        "AttributeName": "id"
+      },
+      {
+        "KeyType": "RANGE",
+        "AttributeName": "createdAt"
+      }
+    ],
+    "ItemCount": 0,
+    "CreationDateTime": 1504038160.201
+  }
+}
