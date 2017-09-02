@@ -17,6 +17,7 @@ export async function main(event, context, callback) {
             exercises: data.exercises
         },
     };
+    console.log('params = ' + JSON.stringify(params));
 
     try {
         const result = await dynamoDbLib.call('put', params);
