@@ -1,5 +1,5 @@
 {
-  "body": "{\"name\": \"plan nummer eins\",\"exercises\": [{\"id\":\"1234\",\"weight\":\"35\", \"saetze\":\"3\"},{\"id\":\"456\",\"weight\":\"100\"}]}",
+  "body": "{\"name\": \"Alle Muskelgruppen\",\"createdAt\": \"2017-09-02\",\"changedAt\": \"2017-09-02\",\"exercises\": \"[]\"}",
   "requestContext": {
     "identity": {
       "cognitoIdentityId": "USER-SUB-1234"

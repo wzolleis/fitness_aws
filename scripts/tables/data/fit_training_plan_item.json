@@ -5,8 +5,10 @@
   "createdAt": {
     "S": "2016-01-01"
   },
-  "active": {
-    "BOOL": true
+  "changedAt": {
+    "S": "2016-01-01"
+  },
+  "name": {
+    "S": "Alle Muskeln"
   }
-
 }
