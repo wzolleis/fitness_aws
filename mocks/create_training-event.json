@@ -1,0 +1,8 @@
+{
+  "body": "{\"name\": \"Test Training\",\"createdAt\": \"2017-09-02\",\"changedAt\": \"2017-09-02\",\"exercises\": \"[]\"}",
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}

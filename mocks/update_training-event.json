@@ -1,0 +1,11 @@
+{
+  "body": "{\"name\":\"Training mit Plan :-)\"}",
+  "pathParameters": {
+    "id": "29136180-8cfd-11e7-be2a-35bb2b6a1767"
+  },
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}
