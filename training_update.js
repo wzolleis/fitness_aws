@@ -20,10 +20,10 @@ export async function main(event, context, callback) {
         // 'ExpressionAttributeValues' defines the value in the update expression
         // 'ExpressionAttributeNames' replaces the #... expressions with the real attribute names, which are reserved keywords in this case
         // https://stackoverflow.com/questions/36698945/scan-function-in-dynamodb-with-reserved-keyword-as-filterexpression-nodejs
-        UpdateExpression: '#ex_name = :name, exercises = :exercises, changedAt = :changedAt, createdAt = :createdAt',
+        UpdateExpression: 'SET #ex_name = :name, exercises = :exercises, changedAt = :changedAt, createdAt = :createdAt',
         ExpressionAttributeValues: {
             ':name': data.name ? data.name : 'training',
-            'exercises': data.exercises,
+            ':exercises': data.exercises ? data.exercises : [],
             ':changedAt': now,
             ':createdAt': data.createdAt ? data.createdAt : now
         },

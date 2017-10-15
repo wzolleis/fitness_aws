@@ -131,7 +131,7 @@ functions:
               method: put
               cors: true
               authorizer: aws_iam
-   listTrainings:
+  listTrainings:
           # Defines an HTTP API endpoint that calls the main function in plans_list.js
           # - path: url path is /plans
           # - method: GET request
@@ -142,7 +142,7 @@ functions:
                 method: get
                 cors: true
                 authorizer: aws_iam
-    createTraining:
+  createTraining:
             # Defines an HTTP API endpoint that calls the main function in plan_create.js
             # - path: url path is /plans
             # - method: POST request
@@ -153,7 +153,7 @@ functions:
                   method: post
                   cors: true
                   authorizer: aws_iam
-    getTraining:
+  getTraining:
             # Defines an HTTP API endpoint that calls the main function in plan_create.js
             # - path: url path is /plans
             # - method: POST request
@@ -164,7 +164,7 @@ functions:
                   method: get
                   cors: true
                   authorizer: aws_iam
-    updateTraining:
+  updateTraining:
           # Defines an HTTP API endpoint that calls the main function in update.js
           # - path: url path is /plans/{id}
           # - method: PUT request
