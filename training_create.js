@@ -12,7 +12,9 @@ export async function main(event, context, callback) {
         Item: {
             id: uuid.v1(),
             name: data.name,
+            plan: data.plan,
             createdAt: moment().format("YYYY-MM-DD"),
+            executions: data.executions,
             exercises: data.exercises
         },
     };

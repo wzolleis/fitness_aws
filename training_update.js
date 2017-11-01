@@ -25,6 +25,7 @@ export async function main(event, context, callback) {
             ':name': data.name ? data.name : 'training',
             ':exercises': data.exercises ? data.exercises : [],
             ':changedAt': now,
+            ':executions': data.executions ? data.executions : [],
             ':createdAt': data.createdAt ? data.createdAt : now
         },
         ExpressionAttributeNames: {

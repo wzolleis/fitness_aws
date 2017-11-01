@@ -1,5 +1,5 @@
 {
-  "body": "{\"name\": \"Test Training\",\"createdAt\": \"2017-09-02\",\"changedAt\": \"2017-09-02\",\"exercises\": \"[]\"}",
+  "body": "{\"name\": \"Test Training\",\"createdAt\": \"2017-09-02\",\"changedAt\": \"2017-09-02\",\"plan\":\"1234\",\"exercises\": \"[]\",\"executions\": \"[]\"}",
   "requestContext": {
     "identity": {
       "cognitoIdentityId": "USER-SUB-1234"
